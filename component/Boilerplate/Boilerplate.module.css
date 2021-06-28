@@ -1,0 +1,29 @@
+.flex_inline{
+    display: flex;
+    float: auto;
+    gap: 1.5rem;
+   
+}
+.header{
+    text-align: center;
+}
+.centent_plate{
+    width: max-content;
+    align-content: center;
+    margin: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.text_jest{
+    margin: auto;
+    border-radius: 1rem;
+    border: solid blue 0.2rem;
+    max-width: max-content;
+    padding: 0.5rem;
+    padding-right: 17rem;
+    padding-left: 17rem;
+    margin-bottom: 1rem;
+}
+.example{
+    padding: 1.5rem;
+}

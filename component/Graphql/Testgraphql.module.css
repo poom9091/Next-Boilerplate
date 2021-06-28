@@ -1,0 +1,23 @@
+.border{
+    width: auto;
+    border-radius: 1rem;
+    border: solid blue 0.2rem;
+    max-width: max-content;
+}
+.header{
+    padding: 0.3rem; 
+    border-bottom: solid 0.1rem gray;
+    text-align: center;
+}
+.center{
+    text-align: center;
+}
+.list{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.list_name{
+    padding: 0.2rem;
+}
