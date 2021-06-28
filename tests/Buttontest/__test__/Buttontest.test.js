@@ -10,9 +10,8 @@ import renderer from "react-test-renderer"
 afterEach(cleanup);
 
 it("render without crashing",()=>{
-    const button = document.createElement("button")
-    ReactDOM.render(<Buttontest/>, button)
-    // ReactDOM.render
+    const div = document.createElement("div")
+    ReactDOM.render(<Buttontest/>, div)
 })
 
 it("render button correctly",() => {
