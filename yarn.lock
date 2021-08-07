@@ -6411,6 +6411,11 @@ glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4, glob@^7.1.6:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
+global-jsdom@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/global-jsdom/-/global-jsdom-8.1.0.tgz#7e96f86629054e1a27437eda1b0c1b7809782740"
+  integrity sha512-FBi84GT/MrzP+H3aReBSWXGVz2kdPaDrK/DByKrOq16mRexWrcJNpV6SONCKXWQuzxRjA7UXMfIvxmGyQZS+2Q==
+
 global-modules@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/global-modules/-/global-modules-2.0.0.tgz#997605ad2345f27f51539bea26574421215c7780"

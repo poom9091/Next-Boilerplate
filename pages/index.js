@@ -1,3 +1,4 @@
+/* eslint no-use-before-define: 0 */  // --> OFF
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
