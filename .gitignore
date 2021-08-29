@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+.serverless*
+
 # testing
 /coverage
 
@@ -32,3 +34,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# environment variable 
+.env

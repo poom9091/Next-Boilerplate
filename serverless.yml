@@ -1,0 +1,13 @@
+service: db-next
+stage: dev
+app: demo
+
+myNextApplicationDemo:
+  component: "@sls-next/serverless-component@3.3.0-alpha.2"
+  inputs:
+    bucketName: ${stage}-${app}-next
+    bucketRegion: ap-southeast-1
+
+
+
+
