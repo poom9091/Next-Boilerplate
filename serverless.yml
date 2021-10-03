@@ -1,13 +1,10 @@
 service: db-next
 stage: dev
-app: demo
+app: ${env.BUCKET_S3_HOST_NAME}
 
-myNextApplicationDemo:
+NextBoilerplate:
   component: "@sls-next/serverless-component@3.3.0-alpha.2"
   inputs:
-    bucketName: ${stage}-${app}-next
+    bucketName: ${app}
+    # bucketName: ${stage}-${app}-next
     bucketRegion: ap-southeast-1
-
-
-
-

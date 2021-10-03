@@ -35,5 +35,8 @@ yarn-error.log*
 # vercel
 .vercel
 
+
 # environment variable 
 .env
+
+serverless/node_modules

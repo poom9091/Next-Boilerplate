@@ -1,0 +1,78 @@
+service: db-dynamoDB
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  profile: serverless-learner
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource: "*"
+  region: ap-southeast-1
+
+  environment:
+    DYNAMODB_TABLE: ${self:service}-${self:provider.stage}
+
+
+functions:
+
+  postdata:
+    handler: rest/create.posttdata
+    events:
+      - http: 
+          path: rest
+          method: post
+
+  listdata:
+    handler: rest/list.listdata
+    events:
+      - http:
+          path: rest
+          method: get
+
+  getdata:
+    handler: rest/get.getdata
+    events:
+      - http: 
+          path: rest/{id}
+          method: get
+
+  updatedata:
+    handler: rest/update.updatedata
+    events:
+      - http:
+          path: rest/{id}
+          method: put
+        
+  deletedata:
+    handler: rest/delete.deletedata
+    events:
+      - http:
+          path: rest/{id}
+          method: delete
+
+resources:
+  Resources:
+    DemoDatabase:
+      Type: 'AWS::DynamoDB::Table'
+      DeletionPolicy: Retain
+      Properties:
+        TableName: ${self:provider.environment.DYNAMODB_TABLE}
+        AttributeDefinitions:
+          - AttributeName: "id"
+            AttributeType: "S"
+          # - AttributeName: "name"
+          #   AttributeType: "S"   
+        KeySchema:
+          - AttributeName: "id"
+            KeyType: "HASH"
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+

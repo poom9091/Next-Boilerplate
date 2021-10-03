@@ -7,9 +7,7 @@ function RestAPI() {
         <div className={styles.border}>
             <h1 className={styles.header}>Test RestAPI</h1>
             <div className={`${styles.input_text} ${styles.space_x }`}> 
-             
                 <Personinput />
-            
             </div>
             <div className={`${styles.space_x} ${styles.list_name}`}>
                 <Personlist />
