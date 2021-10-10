@@ -1,20 +1,33 @@
 /* eslint no-use-before-define: 0 */  // --> OFF
 import styles from '../styles/Home.module.css'
-import Boilerplate from '../component/Boilerplate/Boilerplate'
+import Boilerplate from  '../component/Boilerplate_SSR/Boilerplate'
+import Testgraphql from '../component/Graphql_SSR/Testgraphql' 
+import Buttontest from '../tests/Buttontest/Buttontest'
+import RestAPI from '../component/RestAPI_SSR/RestAPI'
+import Personinput from '../component/RestAPI_SSR/PersonInput/PersonInput'
+import Personlist  from '../component/RestAPI_SSR/PersonList/PersonList'
 import React from 'react'
 import axios from 'axios'
 import {
   ApolloClient,
   InMemoryCache,
-  ApolloProvider,
-  useQuery,
   gql,
 } from "@apollo/client";
-
 function SSR({restAPI,graphQL}){
-  console.log({graphQL});
-  console.log({restAPI});
-  return <Boilerplate restAPI={restAPI} graphQL={graphQL}/>
+  console.log(restAPI);
+  return (
+    <div>
+      <Boilerplate>
+        <div>Boilderplate Next</div>
+        <Buttontest  label="click me plase"/>
+        <RestAPI>
+          <Personinput />
+          <Personlist restAPI={restAPI}/>
+        </RestAPI> 
+        <Testgraphql  graphQL={graphQL}/>
+      </Boilerplate>
+    </div>
+  )  
 }
 // ================================================================================
 async function getREST(){
