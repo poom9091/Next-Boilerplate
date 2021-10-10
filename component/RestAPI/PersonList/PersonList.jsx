@@ -2,21 +2,8 @@ import React from "react";
 import axios from "axios";
 import styles from './PersonList.module.css'
 
-export default function Personlist(personobj) {
-  
-  console.log('Hello')
-  console.log(personobj)
-  
-  return (
-    <div className={styles.list_name}>
-      {personobj.person.map((person) => (
-        <li key={person.id}>{person.name}</li>
-      ))}
-    </div>
-  );
-}
 
-export default class Personlist extends React.Component({personobj}){
+export default class Personlist extends React.Component{
   state = {
     person: [],
   };
@@ -24,13 +11,15 @@ export default class Personlist extends React.Component({personobj}){
   async componentDidMount() {
     axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {
       this.setState({ person: res.data });
+      console.log(this.state);
     });
   }
+
 
   render(){  
     return (
       <div className={styles.list_name}>
-        {this.personobj.person.map((person) => (
+        {this.state.person.map((person) => (
           <li key={person.id}>{person.name}</li>
         ))}
       </div>
@@ -38,12 +27,31 @@ export default class Personlist extends React.Component({personobj}){
   }
 }
 
-// Personlist.getInitialProps = async () => {
-//   personobj = {
-//     person: [],
-//   };  
-//   const personobj= await axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {
-//     this.setState({ person: res.data });
-//   });
-//   return personobj
+// const fetchData = async () =>
+//   await axios.get("https://jsonplaceholder.typicode.com/users")
+//   .then(res => ({
+//     people: res.data
+//   }))
+//   .cacth(() => ({
+//     people: null
+//   })
+// );
+
+// export default function Personlist({people}) {
+  
+//   console.log({people})
+//   // state = {personobj}
+
+//   return (
+//     <div className={styles.list_name}>
+//       {/* {this.state.person.map((person) => (
+//         <li key={person.id}>{person.name}</li>
+//       ))} */}
+//     </div>
+//   );
+// }
+
+// Personlist.getServerSideProp = async () => {
+//   const data = await fetchData();
+//   return { props: data }
 // }
