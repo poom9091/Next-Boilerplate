@@ -2,9 +2,10 @@
 import 'tailwindcss/tailwind.css'
 import NavBar from '../component/NavigationBar/NavigationBar'
 
+
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
+    <div className="bg-blue-500">
       <NavBar/>
       <Component {...pageProps} />
     </div>

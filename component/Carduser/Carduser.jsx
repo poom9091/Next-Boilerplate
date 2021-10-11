@@ -10,7 +10,7 @@ super(props);
   }
   render() {
     return (
-      <div className="flex shadow-xl  rounded-xl border-4">
+      <div className="flex shadow-xl  rounded-xl border-4 bg-white">
         <div>
             <img alt="avatar" src={this.props.avatar} className="rounded-l-lg border-r-4 border-blue-600" />
         </div>

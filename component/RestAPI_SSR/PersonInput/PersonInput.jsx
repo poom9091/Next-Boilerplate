@@ -2,7 +2,6 @@ import React from "react";
 import axios from "axios";
 import Input from "../../../stories/Input/Input"
 import Button from "../../../stories/Button/Button";
-import styles from './PersonInput.module.css'
 export default class Personinput extends React.Component {
   state = {
     name: "",
@@ -34,10 +33,10 @@ export default class Personinput extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} className={styles.flex_inline} >
-        <label className={styles.content_center}> Person name:</label>
+      <form onSubmit={this.handleSubmit} className=" flex place-content-evenly">
+        <label className=" font-semibold text-xl p-2"> Person name:</label>
         <Input   
-          className={styles.text_box}   
+          className=" w-2/4 border-2 border-blue-600 rounded-md p-2 focus:ring-2 focus:ring-blue-600 "
           type="text"
           name="name"
           size="small"
@@ -45,8 +44,9 @@ export default class Personinput extends React.Component {
           onChange={this.handleChange}
         />
         <Button
-          bgcolor="green"
-          boderrd="2rem"
+          className="0"
+          bgcolor="#2563EB"
+          boderrd="0.8rem"
           color="#fff"
           fontsize="14px"
           height="2rem"

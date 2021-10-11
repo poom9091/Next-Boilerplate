@@ -2,12 +2,29 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Boilerplate from '../component/Boilerplate/Boilerplate'
+import Boilerplate from  '../component/Boilerplate_SSR/Boilerplate'
+import Testgraphql from '../component/Graphql/Testgraphql' 
+import Buttontest from '../tests/Buttontest/Buttontest'
+import RestAPI from '../component/RestAPI_SSR/RestAPI'
+import Personinput from '../component/RestAPI_SSR/PersonInput/PersonInput'
+import Personlist  from '../component/RestAPI/PersonList/PersonList'
+import Title from '../component/Title/title'
 import Link from 'next/link'
 
 export default function Home() {
   return (
-    <Boilerplate/>
+    <div>
+      <Boilerplate>
+        <Title title='Nextjs' subtitle='CSR'/>
+        <Buttontest  label="click me plase"/>
+        <RestAPI>
+          <Personinput />
+          <Personlist />
+        </RestAPI> 
+        <Testgraphql />
+      </Boilerplate>
+    </div>
+  
     // <div className={styles.container}>
     //   <Head>
     //     <title>Create Next App</title>

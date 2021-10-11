@@ -1,8 +1,7 @@
 import React from 'react'
-import style from './Buttontest.module.css'
 function Buttontest({label}) {
     return (
-        <button data-testid="button" className={style.button_style}>
+        <button data-testid="button" className="px-4 py-2 bg-blue-600 rounded-lg shadow-lg text-white ">
             {label}
         </button>
     )
