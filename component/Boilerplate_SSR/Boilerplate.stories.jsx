@@ -2,7 +2,7 @@ import React from 'react'
 import Boilerplate from './Boilerplate'
 
 export default {
-    title: 'Boilerplate/GraphQL',
+    title: 'Layout/Boilerplate',
     component: Boilerplate 
 }
 

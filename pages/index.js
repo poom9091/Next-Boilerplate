@@ -12,6 +12,9 @@ import Title from '../component/Title/title'
 import Link from 'next/link'
 import ListLayout from '../component/ListLayout/LiatLayout'
 
+
+var ep = Math.floor(Math.random() * 5)+1;
+
 export default function Home() {
   return (
     <div>
@@ -27,9 +30,9 @@ export default function Home() {
             <h2>Test GraphQl</h2>
             <div className="text-center f">
               <h1 className={styles.center}> Rick and Morty </h1>
-              <h1 className={styles.center}>-- Episodes : 1 --</h1>
+              <h1 className={styles.center}>-- Episodes : {ep.toString()} --</h1>
             </div>
-            <Testgraphql/>
+            <Testgraphql ep={ep}/>
         </ListLayout>
       </Boilerplate>
     </div>

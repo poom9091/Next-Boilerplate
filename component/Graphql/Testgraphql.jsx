@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./Testgraphql.module.css";
 import Carduser from '../Carduser2/Carduser2';
 import {
   ApolloClient,
@@ -13,6 +12,7 @@ var client = new ApolloClient({
   uri: "https://rickandmortyapi.com/graphql",
   cache: new InMemoryCache(),
 });
+
 
 const EXCHANGE_RATES = gql`
   query {

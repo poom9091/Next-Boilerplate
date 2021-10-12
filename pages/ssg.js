@@ -14,12 +14,13 @@ import {
   InMemoryCache,
   gql,
 } from "@apollo/client";
-function SSR({restAPI,graphQL}){
+
+function SSG({restAPI,graphQL}){
   console.log(restAPI);
   return (
     <div>
       <Boilerplate>
-        <Title title='Nextjs' subtitle='SSR'/>
+        <Title title='Nextjs' subtitle='SSG'/>
         <Buttontest  label="click me plase"/>
         <ListLayout side="w-2/3">
           <h2>Test RestAPI</h2>
@@ -30,7 +31,7 @@ function SSR({restAPI,graphQL}){
             <h2>Test GraphQl</h2>
             <div className="text-center f">
               <h1 className={styles.center}> Rick and Morty </h1>
-              <h1 className={styles.center}>-- Episodes : 1 --</h1>
+              <h1 className={styles.center}>-- Episodes : 1  --</h1>
             </div>
             <Testgraphql graphQL={graphQL}/>
         </ListLayout>
@@ -70,7 +71,7 @@ async function getGraphql(){
   return data
 }
 
-export async function getServerSideProps(){
+export async function getStaticProps(){
   const graphQL = await getGraphql(); 
   const restAPI = await getREST(); 
   return {
@@ -78,4 +79,4 @@ export async function getServerSideProps(){
   }; 
 }
 
-export default SSR
+export default SSG
