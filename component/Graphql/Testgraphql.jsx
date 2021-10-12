@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Testgraphql.module.css";
+import Carduser from '../Carduser2/Carduser2';
 import {
   ApolloClient,
   InMemoryCache,
@@ -21,6 +22,7 @@ const EXCHANGE_RATES = gql`
         id
         name
         species
+        image
       }
     }
   }
@@ -32,14 +34,12 @@ function GetCharater() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
-  return data.episodesByIds.map(({ name, characters }) => (
+  return data.episodesByIds.map(({ name, characters}) => (
     <div key={name}>
-      <div className={styles.center}> Rick and Morty </div>
-      <div className={styles.center}>-- Episodes : {name} --</div>
-      <div className={styles.list}>
-        {characters.map(({ name, species }) => (
-          <div className={styles.list_name} classkey={name}>
-            Name : {name} / {species}
+      <div className="flex flex-wrap space-x-3 justify-center py-5"> 
+        {characters.map(({ name, species ,image }) => (
+          <div className="" classkey={name}>
+            <Carduser name={name} species={species} image={image} />
           </div>
         ))}
       </div>
@@ -51,10 +51,7 @@ export default class Testgraphql extends React.Component {
   render() {
     return (
       <ApolloProvider client={client}>
-        <div className={styles.border}>
-          <h2 className={styles.header}>Test GraphQl</h2>
           <GetCharater />
-        </div>
       </ApolloProvider>
     );
   }

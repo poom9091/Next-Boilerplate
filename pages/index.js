@@ -10,6 +10,7 @@ import Personinput from '../component/RestAPI_SSR/PersonInput/PersonInput'
 import Personlist  from '../component/RestAPI/PersonList/PersonList'
 import Title from '../component/Title/title'
 import Link from 'next/link'
+import ListLayout from '../component/ListLayout/LiatLayout'
 
 export default function Home() {
   return (
@@ -21,6 +22,14 @@ export default function Home() {
           <Personinput />
           <Personlist />
         </RestAPI> 
+        <ListLayout>
+            <h2>Test GraphQl</h2>
+            <div className="text-center f">
+              <h1 className={styles.center}> Rick and Morty </h1>
+              <h1 className={styles.center}>-- Episodes : 1 --</h1>
+              <Testgraphql/>
+            </div>
+        </ListLayout>
         <Testgraphql />
       </Boilerplate>
     </div>
