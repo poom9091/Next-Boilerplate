@@ -18,19 +18,19 @@ export default function Home() {
       <Boilerplate>
         <Title title='Nextjs' subtitle='CSR'/>
         <Buttontest  label="click me plase"/>
-        <RestAPI>
+        <ListLayout side="w-2/3">
+          <h2>Test RestAPI</h2>
           <Personinput />
           <Personlist />
-        </RestAPI> 
-        <ListLayout>
+        </ListLayout> 
+        <ListLayout side="w-1/3">
             <h2>Test GraphQl</h2>
             <div className="text-center f">
               <h1 className={styles.center}> Rick and Morty </h1>
               <h1 className={styles.center}>-- Episodes : 1 --</h1>
-              <Testgraphql/>
             </div>
+            <Testgraphql/>
         </ListLayout>
-        <Testgraphql />
       </Boilerplate>
     </div>
   

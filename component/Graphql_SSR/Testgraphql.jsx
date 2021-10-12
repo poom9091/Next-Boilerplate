@@ -1,4 +1,5 @@
 import React from "react";
+import Carduser from "../Carduser2/Carduser2";
 import styles from "./Testgraphql.module.css";
 
 function GetCharater(props) {
@@ -8,13 +9,11 @@ function GetCharater(props) {
   // if (error) return <p>Error :(</p>;
 
   return props.data.episodesByIds.map(({ name, characters }) => (
-    <div key={name}>
-      <div className={styles.center}> Rick and Morty </div>
-      <div className={styles.center}>-- Episodes : {name} --</div>
-      <div className={styles.list}>
-        {characters.map(({ name, species }) => (
-          <div className={styles.list_name} classkey={name}>
-            Name : {name} / {species}
+     <div key={name}>
+      <div className="flex flex-wrap space-x-3 justify-center "> 
+        {characters.map(({ name, species ,image }) => (
+          <div classkey={name}>
+            <Carduser name={name} species={species} image={image} />
           </div>
         ))}
       </div>
@@ -30,10 +29,7 @@ export default class Testgraphql extends React.Component {
   render() {
     return (
       // <ApolloProvider client={client}>
-        <div className={styles.border}>
-          <h2 className={styles.header}>Test GraphQl</h2>
           <GetCharater data={this.props.graphQL}/>
-        </div>
       // {/* </ApolloProvider> */}
     );
   }

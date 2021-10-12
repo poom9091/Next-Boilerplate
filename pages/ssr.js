@@ -3,9 +3,10 @@ import styles from '../styles/Home.module.css'
 import Boilerplate from  '../component/Boilerplate_SSR/Boilerplate'
 import Testgraphql from '../component/Graphql_SSR/Testgraphql' 
 import Buttontest from '../tests/Buttontest/Buttontest'
-import RestAPI from '../component/RestAPI_SSR/RestAPI'
 import Personinput from '../component/RestAPI_SSR/PersonInput/PersonInput'
 import Personlist  from '../component/RestAPI_SSR/PersonList/PersonList'
+import Title from '../component/Title/title'
+import ListLayout from '../component/ListLayout/LiatLayout'
 import React from 'react'
 import axios from 'axios'
 import {
@@ -18,13 +19,21 @@ function SSR({restAPI,graphQL}){
   return (
     <div>
       <Boilerplate>
-        <div>Boilderplate Next</div>
+        <Title title='Nextjs' subtitle='SSR'/>
         <Buttontest  label="click me plase"/>
-        <RestAPI>
+        <ListLayout side="w-2/3">
+          <h2>Test RestAPI</h2>
           <Personinput />
           <Personlist restAPI={restAPI}/>
-        </RestAPI> 
-        <Testgraphql  graphQL={graphQL}/>
+        </ListLayout> 
+        <ListLayout side="w-1/3">
+            <h2>Test GraphQl</h2>
+            <div className="text-center f">
+              <h1 className={styles.center}> Rick and Morty </h1>
+              <h1 className={styles.center}>-- Episodes : 1 --</h1>
+            </div>
+            <Testgraphql graphQL={graphQL}/>
+        </ListLayout>
       </Boilerplate>
     </div>
   )  
@@ -50,6 +59,7 @@ async function getGraphql(){
         name
         characters {
           id
+          image
           name
           species
         }

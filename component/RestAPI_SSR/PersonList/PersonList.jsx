@@ -1,7 +1,7 @@
 import React from "react";
-import axios from "axios";
-import styles from './PersonList.module.css'
-
+import styles from './PersonList.module.css';
+import Carduser from "../../Carduser/Carduser";
+import faker from 'faker';
 
 export default class Personlist extends React.Component{
   constructor(props){
@@ -22,10 +22,18 @@ export default class Personlist extends React.Component{
   render(){  
     return (
       <div className={styles.list_name}>
-        {this.state.person.map((person) => (
-          <li key={person.id}>{person.name}</li>
-        ))}
-      </div>
+      {this.state.person.map((person) => (
+        <div key={person.id}>
+          <Carduser 
+            name={person.name} 
+            username={person.username} 
+            phone={person.phone} 
+            email={person.email} 
+            avatar={faker.image.avatar()}
+          /> 
+        </div>
+      ))}
+    </div>
     );
   }
 }
