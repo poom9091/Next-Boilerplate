@@ -13,7 +13,14 @@ function GetCharater(props) {
       <div className="flex flex-wrap space-x-3 justify-center "> 
         {characters.map(({ name, species ,image }) => (
           <div classkey={name}>
-            <Carduser name={name} species={species} image={image} />
+            <Carduser 
+              name={name} 
+              species={species} 
+              image={image} 
+              imageWidht="w-36" 
+              imageHight="h-36" 
+              colortheme="blue-400"
+            />
           </div>
         ))}
       </div>

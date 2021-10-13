@@ -15,7 +15,7 @@ const Template = (args) =>
 </div>
 export const Main= Template.bind({});
 Main.args = {
-  colortheam: 'blue-600',
+  colortheme: 'blue-600',
   avatar: faker.image.avatar() ,
   name: faker.fake("{{name.firstName}} {{name.lastName}}"), 
   username: faker.name.firstName(), 

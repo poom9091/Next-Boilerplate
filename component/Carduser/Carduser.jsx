@@ -14,9 +14,9 @@ super(props);
         <div>
             <img alt="avatar" src={this.props.avatar} className="rounded-l-lg " />
         </div>
-        <div className={`px-4 w-full border-${this.props.colortheam} border-b-4 border-l-4 bor`}>
+        <div className={`px-4 w-full border-${this.props.colortheme} border-b-4 border-l-4 bor`}>
             <div className="p-1">
-                <h1 className={` text-xl font-semibold text-${this.props.colortheam}`} > {this.props.name}</h1>
+                <h1 className={` text-xl font-semibold text-${this.props.colortheme}`} > {this.props.name}</h1>
                 <h1 className=" text-sm font-semibold text-gray-500 ">{this.props.username}</h1>
             </div>
              

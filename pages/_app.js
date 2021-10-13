@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
       >
         <Menu Path="/" Text="CSR" TextColor="text-white" ColorHover="bg-gray-400"/>
         <Menu Path="/ssr" Text="SSR" TextColor="text-white" ColorHover="bg-gray-400"/>
-        <Menu Path="/ssg" Text="CSR" TextColor="text-white" ColorHover="bg-gray-400"/>
+        <Menu Path="/ssg" Text="SSG" TextColor="text-white" ColorHover="bg-gray-400"/>
       </NavBar>
       <Component {...pageProps} />
     </div>
