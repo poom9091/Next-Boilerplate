@@ -32,6 +32,7 @@ export default class Personlist extends React.Component{
         {this.state.person.map((person) => (
           <div key={person.id}>
             <Carduser 
+              colortheam="blue-500"
               name={person.name} 
               username={person.username} 
               phone={person.phone} 
