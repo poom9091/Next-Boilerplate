@@ -22,6 +22,27 @@ Main.args = {
   // children: 'Primary Args'
 };
 
-export const CSR = () => <Title title='Nextjs' subtitle='CSR' />
-export const SSR = () => <Title title='Nextjs' subtitle='SSR' />
-export const SSG = () => <Title title='Nextjs' subtitle='SSG' />
+export const CSR = () => <Title 
+  title='Nextjs' 
+  subtitle='CSR' 
+  TitleColor='text-white' 
+  TitleSize='text-9xl' 
+  SubTitleColor= "text-gray-600"
+  SubTitleSize= "text-6xl"
+/> 
+export const SSR = () => <Title 
+  title='Nextjs' 
+  subtitle='SSR' 
+  TitleColor='text-white' 
+  TitleSize='text-9xl' 
+  SubTitleColor= "text-gray-600"
+  SubTitleSize= "text-6xl"
+/>
+export const SSG = () => <Title 
+  title='Nextjs' 
+  subtitle='SSG' 
+  TitleColor='text-white' 
+  TitleSize='text-9xl' 
+  SubTitleColor= "text-gray-600"
+  SubTitleSize= "text-6xl"
+/> 
