@@ -19,7 +19,14 @@ function SSR({restAPI,graphQL}){
   return (
     <div>
       <Boilerplate>
-        <Title title='Nextjs' subtitle='SSR'/>
+        <Title 
+          title='Nextjs' 
+          subtitle='SSR' 
+          TitleColor='text-white' 
+          TitleSize='text-9xl' 
+          SubTitleColor= "text-gray-600"
+          SubTitleSize= "text-6xl"
+        />
         <Buttontest  label="click me plase"/>
         <ListLayout side="w-2/3">
           <h2>Test RestAPI</h2>

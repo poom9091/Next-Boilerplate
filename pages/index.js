@@ -19,7 +19,14 @@ export default function Home() {
   return (
     <div>
       <Boilerplate>
-        <Title title='Nextjs' subtitle='CSR'/>
+        <Title 
+          title='Nextjs' 
+          subtitle='CSR' 
+          TitleColor='text-white' 
+          TitleSize='text-9xl' 
+          SubTitleColor= "text-gray-600"
+          SubTitleSize= "text-6xl"
+        />
         <Buttontest  label="click me plase"/>
         <ListLayout side="w-2/3">
           <h2>Test RestAPI</h2>
