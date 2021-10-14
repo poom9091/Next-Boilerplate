@@ -1,7 +1,8 @@
 /* eslint no-use-before-define: 0 */  // --> OFF
-import 'tailwindcss/tailwind.css'
-import NavBar from '../component/NavigationBar/NavigationBar'
-import Menu from '../component/NavigationBar/Manu'
+// import 'tailwindcss/tailwind.css'
+import '../styles/globals.css'
+import NavBar from '../components/NavigationBar/NavigationBar'
+import Menu from '../components/NavigationBar/Manu'
 
 
 function MyApp({ Component, pageProps }) {

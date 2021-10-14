@@ -7,7 +7,7 @@ export default class NavBar extends React.Component{
     }
     render(){
         return(
-            <div className={`${this.props.NavbarColor} ${this.props.NavbarTextColor} text-white w-full h-12 flex place-content-between px-8 text-xl `}>
+            <div className={`${this.props.NavbarColor} ${this.props.NavbarTextColor}  w-full h-12 flex place-content-between px-8 text-xl `}>
                 <div className='flex items-center'>
                     <h1 className={`font-bold `}>{this.props.NavbarName}</h1>
                 </div>

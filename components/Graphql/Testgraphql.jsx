@@ -1,5 +1,5 @@
 import React from "react";
-import 'tailwindcss/tailwind.css';
+import 'tailwindcss/tailwind.css'
 import Carduser from '../Carduser2/Carduser2';
 import {
   ApolloClient,
@@ -35,12 +35,13 @@ function GetCharater() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
-  return data.episodesByIds.map(({ name, characters}) => (
-    <div key={name}>
+  return data.episodesByIds.map(({ characters}) => (
+    <div key={ characters}>
       <div className="flex flex-wrap space-x-3 justify-center py-5"> 
-        {characters.map(({ name, species ,image }) => (
-          <div className="" classkey={name}>
+        {characters.map(({ id,name, species ,image }) => (
+          <div  key={id} classkey={name}>
             <Carduser 
+              key={id}
               name={name} 
               species={species} 
               image={image} 

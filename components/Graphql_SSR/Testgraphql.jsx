@@ -9,12 +9,13 @@ function GetCharater(props) {
   // if (loading) return <p>Loading...</p>;
   // if (error) return <p>Error :(</p>;
 
-  return props.data.episodesByIds.map(({ name, characters }) => (
-     <div key={name}>
+  return props.data.episodesByIds.map(({ characters }) => (
+     <div key={characters}>
       <div className="flex flex-wrap space-x-3 justify-center "> 
-        {characters.map(({ name, species ,image }) => (
-          <div classkey={name}>
+        {characters.map(({ id,name, species ,image }) => (
+          <div key={id} classkey={name}>
             <Carduser 
+              key={id}
               name={name} 
               species={species} 
               image={image} 
@@ -36,9 +37,9 @@ export default class Testgraphql extends React.Component {
   }
   render() {
     return (
-      // <ApolloProvider client={client}>
+      // <ApolloProvider>jj
           <GetCharater data={this.props.graphQL}/>
-      // {/* </ApolloProvider> */}
+      // </ApolloProvider>
     );
   }
 }

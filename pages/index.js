@@ -1,16 +1,14 @@
 /* eslint no-use-before-define: 0 */  // --> OFF
+// import 'tailwindcss/tailwind.css';
+
 import styles from '../styles/Home.module.css';
-import 'tailwindcss/tailwind.css';
-import Boilerplate from  '../component/Boilerplate_SSR/Boilerplate';
-import Testgraphql from '../component/Graphql/Testgraphql' ;
+import Boilerplate from  '../components/Boilerplate_SSR/Boilerplate';
+import Testgraphql from '../components/Graphql/Testgraphql' ;
 import Buttontest from '../tests/Buttontest/Buttontest';
-import Personinput from '../component/RestAPI_SSR/PersonInput/PersonInput';
-import Personlist  from '../component/RestAPI/PersonList/PersonList';
-import Title from '../component/Title/title';
-import ListLayout from '../component/ListLayout/LiatLayout';
-
-
-var ep = Math.floor(Math.random() * 5)+1;
+import Personinput from '../components/RestAPI_SSR/PersonInput/PersonInput';
+import Personlist  from '../components/RestAPI/PersonList/PersonList';
+import Title from '../components/Title/title';
+import ListLayout from '../components/ListLayout/LiatLayout';
 
 export default function Home() {
   return (
@@ -26,17 +24,17 @@ export default function Home() {
         />
         <Buttontest  label="click me plase"/>
         <ListLayout side="w-2/3">
-          <h2>Test RestAPI</h2>
+          <h1>Test RestAPI</h1>
           <Personinput />
           <Personlist />
         </ListLayout> 
         <ListLayout side="w-1/3">
-            <h2>Test GraphQl</h2>
+            <h1>Test GraphQl</h1>
             <div className="text-center f">
               <h1 className={styles.center}> Rick and Morty </h1>
-              <h1 className={styles.center}>-- Episodes : {ep.toString()} --</h1>
+              <h1 className={styles.center}>-- Episodes : 1 --</h1>
             </div>
-            <Testgraphql ep={ep}/>
+            <Testgraphql ep="1"/>
         </ListLayout>
       </Boilerplate>
     </div>
