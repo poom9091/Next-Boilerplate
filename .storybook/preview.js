@@ -1,4 +1,3 @@
-import '../styles/globals.css'
 import 'tailwindcss/tailwind.css';
 import { addDecorator } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
