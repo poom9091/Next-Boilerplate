@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import 'tailwindcss/tailwind.css';
 
 export default class Menu extends React.Component{
     constructor(props){

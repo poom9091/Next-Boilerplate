@@ -1,4 +1,5 @@
 import React from "react";
+import 'tailwindcss/tailwind.css';
 import Carduser from "../Carduser2/Carduser2";
 import styles from "./Testgraphql.module.css";
 

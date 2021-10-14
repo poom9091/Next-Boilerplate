@@ -1,4 +1,5 @@
 import React from "react";
+import 'tailwindcss/tailwind.css';
 import styles from './PersonList.module.css';
 import Carduser from "../../Carduser/Carduser";
 import faker from 'faker';

@@ -1,5 +1,5 @@
-import React from 'react'
-import faker from 'faker'
+import React from 'react';
+import 'tailwindcss/tailwind.css';
 
 export default class Carduser extends React.Component{
     constructor(props){

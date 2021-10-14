@@ -1,5 +1,5 @@
-import React from 'react'
-import Menu from './Manu'
+import React from 'react';
+import 'tailwindcss/tailwind.css';
 
 export default class NavBar extends React.Component{
     constructor(props){

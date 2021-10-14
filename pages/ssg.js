@@ -1,14 +1,15 @@
 /* eslint no-use-before-define: 0 */  // --> OFF
-import styles from '../styles/Home.module.css'
-import Boilerplate from  '../component/Boilerplate_SSR/Boilerplate'
-import Testgraphql from '../component/Graphql_SSR/Testgraphql' 
-import Buttontest from '../tests/Buttontest/Buttontest'
-import Personinput from '../component/RestAPI_SSR/PersonInput/PersonInput'
-import Personlist  from '../component/RestAPI_SSR/PersonList/PersonList'
-import Title from '../component/Title/title'
-import ListLayout from '../component/ListLayout/LiatLayout'
-import React from 'react'
-import axios from 'axios'
+import 'tailwindcss/tailwind.css';
+import styles from '../styles/Home.module.css';
+import Boilerplate from  '../component/Boilerplate_SSR/Boilerplate';
+import Testgraphql from '../component/Graphql_SSR/Testgraphql' ;
+import Buttontest from '../tests/Buttontest/Buttontest';
+import Personinput from '../component/RestAPI_SSR/PersonInput/PersonInput';
+import Personlist  from '../component/RestAPI_SSR/PersonList/PersonList';
+import Title from '../component/Title/title';
+import ListLayout from '../component/ListLayout/LiatLayout';
+import React from 'react';
+import axios from 'axios';
 import {
   ApolloClient,
   InMemoryCache,

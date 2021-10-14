@@ -1,15 +1,13 @@
 /* eslint no-use-before-define: 0 */  // --> OFF
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Boilerplate from  '../component/Boilerplate_SSR/Boilerplate'
-import Testgraphql from '../component/Graphql/Testgraphql' 
-import Buttontest from '../tests/Buttontest/Buttontest'
-import Personinput from '../component/RestAPI_SSR/PersonInput/PersonInput'
-import Personlist  from '../component/RestAPI/PersonList/PersonList'
-import Title from '../component/Title/title'
-import Link from 'next/link'
-import ListLayout from '../component/ListLayout/LiatLayout'
+import styles from '../styles/Home.module.css';
+import 'tailwindcss/tailwind.css';
+import Boilerplate from  '../component/Boilerplate_SSR/Boilerplate';
+import Testgraphql from '../component/Graphql/Testgraphql' ;
+import Buttontest from '../tests/Buttontest/Buttontest';
+import Personinput from '../component/RestAPI_SSR/PersonInput/PersonInput';
+import Personlist  from '../component/RestAPI/PersonList/PersonList';
+import Title from '../component/Title/title';
+import ListLayout from '../component/ListLayout/LiatLayout';
 
 
 var ep = Math.floor(Math.random() * 5)+1;

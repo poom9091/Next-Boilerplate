@@ -1,4 +1,5 @@
 import React from "react";
+import 'tailwindcss/tailwind.css';
 import axios from "axios";
 import Input from "../../../stories/Input/Input"
 import Button from "../../../stories/Button/Button";
