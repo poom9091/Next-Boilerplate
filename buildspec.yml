@@ -1,17 +1,18 @@
 version: 0.2
 
 phases:
-  pre_build:
+  install:
+    runtime-versions:
+      nodejs: latest
     commands:
-      - echo Login ECR
-      - $(aws ecr get-login --region $AWS_REGION --no-include-email)
-      - echo Docker pull images ....
-      - docker $DOCKER_REGISTRY/$IMAGE_REPO_NAME:$IMAGE_TAG || true 
+      - echo Install Dependencies 
+      - yarn install --frozen-lockfile
+      - npm install -g serverless
   build:
     commands:
-      - echo Building Docker image....
-      - docker build --cache-from $DOCKER_REGISTRY/$IMAGE_REPO_NAME:$IMAGE_TAG --tag $DOCKER_REGISTRY/$IMAGE_REPO_NAME:$IMAGE_TAG .
-  post_build:
-    commands:
-      - echo Push the Docker image to ECR
-      - docker push $DOCKER_REGISTRY/$IMAGE_REPO_NAME:$IMAGE_TAG
+      - echo Deploy Next.js
+      - npx serverless 
+  # post_build:
+  #   commands:
+  #     - 
+  #     - docker push $DOCKER_REGISTRY/$IMAGE_REPO_NAME:$IMAGE_TAG
