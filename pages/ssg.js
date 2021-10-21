@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css';
 import Boilerplate from  '../components/Boilerplate_SSR/Boilerplate';
 import Testgraphql from '../components/Graphql_SSR/Testgraphql' ;
 import Buttontest from '../tests/Buttontest/Buttontest';
-import Personinput from '../components/RestAPI_SSR/PersonInput/PersonInput';
+import Personinput from '../components/PersonInput/PersonInput';
 import Personlist  from '../components/RestAPI_SSR/PersonList/PersonList';
 import Title from '../components/Title/title';
 import ListLayout from '../components/ListLayout/LiatLayout';
