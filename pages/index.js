@@ -16,7 +16,7 @@ export default function Home() {
       <Boilerplate>
         <Title 
           title='Nextjs' 
-          subtitle='CSR' 
+          subtitle='Boilerplate' 
           TitleColor='text-white' 
           TitleSize='text-9xl' 
           SubTitleColor= "text-gray-600"
