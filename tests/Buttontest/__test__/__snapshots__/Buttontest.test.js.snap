@@ -2,7 +2,7 @@
 
 exports[`matches snapshot 1`] = `
 <button
-  className="button_style"
+  className="px-4 py-2 bg-blue-600 rounded-lg shadow-lg text-white "
   data-testid="button"
 >
   save
@@ -11,7 +11,7 @@ exports[`matches snapshot 1`] = `
 
 exports[`matches snapshot 2`] = `
 <button
-  className="button_style"
+  className="px-4 py-2 bg-blue-600 rounded-lg shadow-lg text-white "
   data-testid="button"
 >
   click me please
