@@ -13,7 +13,7 @@ function GetCharater(props) {
      <div key={characters}>
       <div className="flex flex-wrap space-x-3 justify-center "> 
         {characters.map(({ id,name, species ,image }) => (
-          <div key={id} classkey={name}>
+          <div key={id} className={name}>
             <Carduser 
               key={id}
               name={name} 

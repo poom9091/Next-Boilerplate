@@ -2,11 +2,11 @@
 // import 'tailwindcss/tailwind.css';
 
 import styles from '../styles/Home.module.css';
-import Boilerplate from  '../components/Boilerplate_SSR/Boilerplate';
-import Testgraphql from '../components/Graphql/Testgraphql' ;
+import Boilerplate from '../components/Boilerplate_SSR/Boilerplate';
+import Testgraphql from '../components/Graphql/Testgraphql';
 import Buttontest from '../tests/Buttontest/Buttontest';
 import Personinput from '../components/PersonInput/PersonInput';
-import Personlist  from '../components/RestAPI/PersonList/PersonList';
+import Personlist from '../components/RestAPI/PersonList/PersonList';
 import Title from '../components/Title/title';
 import ListLayout from '../components/ListLayout/LiatLayout';
 
@@ -14,31 +14,31 @@ export default function Home() {
   return (
     <div>
       <Boilerplate>
-        <Title 
-          title='Nextjs' 
-          subtitle='Boilerplate' 
-          TitleColor='text-white' 
-          TitleSize='text-9xl' 
-          SubTitleColor= "text-gray-600"
-          SubTitleSize= "text-6xl"
+        <Title
+          title='Nextjs'
+          subtitle='Boilerplate'
+          TitleColor='text-white'
+          TitleSize='text-9xl'
+          SubTitleColor="text-gray-600"
+          SubTitleSize="text-6xl"
         />
-        <Buttontest  label="click me plase"/>
+        <Buttontest label="click me plase" />
         <ListLayout side="w-2/3">
           <h1>Test RestAPI</h1>
           <Personinput />
           <Personlist />
-        </ListLayout> 
+        </ListLayout>
         <ListLayout side="w-1/3">
-            <h1>Test GraphQl</h1>
-            <div className="text-center f">
-              <h1 className={styles.center}> Rick and Morty </h1>
-              <h1 className={styles.center}>-- Episodes : 1 --</h1>
-            </div>
-            <Testgraphql ep="1"/>
+          <h1>Test GraphQl</h1>
+          <div className="text-center f">
+            <h1 className={styles.center}> Rick and Morty </h1>
+            <h1 className={styles.center}>-- Episodes : 1 --</h1>
+          </div>
+          <Testgraphql ep="1" />
         </ListLayout>
       </Boilerplate>
     </div>
-  
+
     // <div className={styles.container}>
     //   <Head>
     //     <title>Create Next App</title>
