@@ -18,3 +18,16 @@ phases:
       - echo Push the Docker image to ECR
       - docker push $DOCKER_REGISTRY/$IMAGE_REPO_NAME:$IMAGE_TAG
       - printf '[{"name":"%s","imageUri":"%s"}]' $TASK_DEFINITION_CONTAINER_NAME  $IMAGE_REPO_NAME:$IMAGE_TAG > imagedefinitions.json 
+artifacts:
+  files:
+    - 'image*.json'
+    - 'appspec.yaml'
+    - 'taskdef.json'
+  secondary-artifacts:
+    DefinitionArtifact:
+      files:
+        - appspec.yaml
+        - taskdef.json
+    ImageArtifact:
+      files:
+        - imagedefinitions.json
