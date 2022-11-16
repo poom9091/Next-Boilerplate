@@ -18,6 +18,7 @@ phases:
       - echo Push the Docker image to ECR
       - docker push $DOCKER_REGISTRY/$IMAGE_REPO_NAME:$IMAGE_TAG
       - printf '[{"name":"%s","imageUri":"%s"}]' $TASK_DEFINITION_CONTAINER_NAME  $IMAGE_REPO_NAME:$IMAGE_TAG > imagedefinitions.json 
+      - aws ecs describe-task-definition --task-definition dev-rmw-alb --output json > taskdef.json
 artifacts:
   files:
     - 'image*.json'
