@@ -7,4 +7,4 @@ Resources:
         TaskDefinition: <TASK_DEFINITION>
         LoadBalancerInfo:
           ContainerName: "dev-rmw-alb-container" 
-          ContainerPort: 8000 
+          ContainerPort: 80 
