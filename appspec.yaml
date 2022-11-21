@@ -4,7 +4,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: dev-rmw-alb-container
+        TaskDefinition: <TASK_DEFINITION>
         LoadBalancerInfo:
-          ContainerName: "simplehttp-container" 
-          ContainerPort: 80 
+          ContainerName: "dev-rmw-alb-container" 
+          ContainerPort: 8000 
