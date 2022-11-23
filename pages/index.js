@@ -15,7 +15,7 @@ export default function Home() {
     <div>
       <Boilerplate>
         <Title
-          title='Nextjs V2'
+          title='Nextjs'
           subtitle='Boilerplate'
           TitleColor='text-white'
           TitleSize='text-9xl'
